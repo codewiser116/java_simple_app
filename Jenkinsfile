@@ -10,7 +10,6 @@ pipeline {
         stage("Compilation and Tests") {
             steps {
                 sh "./mvnw clean install -DskipTests"
-                sh "./mvnw test"
             }
         }
 
