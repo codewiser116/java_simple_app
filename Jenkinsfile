@@ -7,12 +7,6 @@ pipeline {
             }
         }
 
-        stage("Compilation and Tests") {
-            steps {
-                sh "./mvnw clean install -DskipTests"
-            }
-        }
-
         stage("Tests files") {
             steps {
                 sh "ls"
