@@ -27,7 +27,7 @@ pipeline {
                 // Navigate into the tests directory and run tests
                 dir('tests') {
                     echo 'Running tests...'
-                    sh "./mvn test"
+                    sh "./mvnw test"
                 }
             }
         }
