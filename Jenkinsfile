@@ -9,8 +9,7 @@ pipeline {
 
         stage("Tests files") {
             steps {
-                sh "ls"
-                sh "pwd"
+                sh "mvn install"
             }
         }
 
@@ -27,7 +26,7 @@ pipeline {
                 // Navigate into the tests directory and run tests
                 dir('tests') {
                     echo 'Running tests...'
-                    sh "./mvnw test"
+                    sh "./mvn test"
                 }
             }
         }
